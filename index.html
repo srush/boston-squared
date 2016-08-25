@@ -3,11 +3,66 @@
 <style> body { font-family: sans-serif; } </style>
 <body>
   <script src="require.js"></script>
+
+  <style>
+    g.square rect {
+    ry : 2;
+    rx : 2;
+    stroke-width: 5px;
+    stroke: black;
+    fill: white;
+    margin: 2px;
+    }
+
+    g.square:hover rect {
+    stroke-width: 10px;
+    }
+
+    g.square text {
+    text-anchor: middle;
+    }
+
+    g.square:hover text {
+    font-weight: bold;
+    }
+
+    line.connect {
+    stroke-width : 2px;
+    }
+
+    line.connect:hover {
+    stroke-width : 4px;
+    }
+
+    line.subway {
+    stroke: red;
+    }
+    line.bike {
+    stroke: black;
+    }
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+    #street-view {
+    height: 100%;
+          }
+    
+    #street-view {
+    height: 100%;
+          }
+  </style>
+  
   <script>
     require.config({
     paths: {
-    d3: "http://d3js.org/d3.v4.min"
+    d3: "http://d3js.org/d3.v3.min"
     }
     });
-
     </script>
+  <script src="project.js"></script>
+  <div id="street-view"></div>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbT0OhLrB31QihooHFupYOwu3E7C7oFy8&callback=initialize">
+        </script>
