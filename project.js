@@ -2,8 +2,8 @@ require(["d3"], init);
 
 
 var margin = {top: 100, right: 100, bottom: 100, left: 100},
-    width = 1000 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+    width = 800 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
 var rows = 4;
 
@@ -26,12 +26,12 @@ function init(d3) {
     var xMapScale, yMapScale;
    
 
-    var svg = d3.select("body").style("text-align", "center").insert("svg", ":first-child")
+    var svg = d3.select("div.map").style("text-align", "center").insert("svg", ":first-child")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    d3.select("body").insert("h1", ":first-child").text("Make Boston Square Again");
+    d3.select("body").style("text-align", "center").insert("h1", ":first-child").text("Make Boston Square Again");
 
     
     function draw_selected(d) {
